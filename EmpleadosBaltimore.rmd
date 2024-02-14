@@ -24,6 +24,24 @@ rutaFichero<-"data/Baltimore_City_Employee_Salaries.csv"
 datosRbase <- read.csv(file=rutaFichero)
 ```
 
+#Importamos datos con readr
+
+```{r}
+library(readr)
+datosReadr <-read_csv("data/Baltimore_City_Employee_Salaries.csv",
+    col_types = cols(hireDate = col_date(format = "%Y-%m-%d")))
+View(datosReadr)
+
+```
+
+#Importamos datos con RIO
+
+```{r}
+library(rio)
+datosRio<-import(file="data/Baltimore_City_Employee_Salaries.csv")
+
+```
+
 
 
 
